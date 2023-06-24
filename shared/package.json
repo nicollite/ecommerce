@@ -1,0 +1,21 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "interfaces for the system",
+  "private": true,
+  "scripts": {
+    "build": "rimraf dist types & ttsc"
+  },
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "^3.9.7",
+    "typescript-transform-paths": "^2.2.0"
+  }
+}
