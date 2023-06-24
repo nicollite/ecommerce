@@ -1,0 +1,24 @@
+// Create margin helpers with a 5px difference
+@mixin createMarginHelpers($size) {
+  .mt-#{$size} {
+    margin-top: $size;
+  }
+  .mr-#{$size} {
+    margin-right: $size;
+  }
+  .mb-#{$size} {
+    margin-bottom: $size;
+  }
+  .ml-#{$size} {
+    margin-left: $size;
+  }
+  .gap-#{$size} {
+    grid-gap: $size !important;
+    gap: $size !important;
+  }
+}
+
+@for $i from 1 through 16 {
+  $size: #{$i * 5}px;
+  @include createMarginHelpers($size);
+}

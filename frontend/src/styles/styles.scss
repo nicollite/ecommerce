@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "./reset.scss";
+@import "./helpers.scss";
+
+// Main theme
+@import "./light-theme.scss";
+
+$font: "Roboto", sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+input {
+  cursor: text;
+  background-color: #fff;
+  padding: 5px;
+  color: #111;
+  outline: none;
+  max-width: 100%;
+  vertical-align: bottom;
+  text-align: inherit;
+  caret-color: var(--primary-color);
+  border: 0;
+
+  &[type="file"] {
+    display: none;
+  }
+}
+
+.mat-typography {
+  p,
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+}
