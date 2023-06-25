@@ -4,17 +4,14 @@ import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SharedMaterialModule } from "./shared-material.module";
-
-// Components
-
-// Pipes
-import { pipes } from "./pipes/pipes";
-
-// Directives
-import { directives } from "./directives/directives";
 import { HttpClientModule } from "@angular/common/http";
 
-const declarations_exports = [...pipes, ...directives];
+// Components, pipes and directives
+import { components } from "./components/components";
+import { pipes } from "./pipes/pipes";
+import { directives } from "./directives/directives";
+
+const declarations_exports = [...components, ...pipes, ...directives];
 
 @NgModule({
   declarations: declarations_exports,
