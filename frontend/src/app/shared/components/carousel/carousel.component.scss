@@ -16,16 +16,6 @@
   position: relative;
 }
 
-.carousel-items {
-}
-.carousel-item {
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
 app-arrow-navigator {
   position: absolute;
   top: 0;
