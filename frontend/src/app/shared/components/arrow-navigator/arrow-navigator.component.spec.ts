@@ -12,16 +12,11 @@ describe("ArrowNavigatorComponent", () => {
     // Reset mocks between tests
     jest.resetAllMocks();
 
-    try {
-      const a = await TestBed.configureTestingModule({
-        declarations: [ArrowNavigatorComponent],
-        imports: [MatIconModule],
-        schemas: [NO_ERRORS_SCHEMA],
-      }).compileComponents();
-    } catch (error) {
-      console.log(error);
-      console.trace(error);
-    }
+    await TestBed.configureTestingModule({
+      declarations: [ArrowNavigatorComponent],
+      imports: [MatIconModule],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ArrowNavigatorComponent);
     component = fixture.componentInstance;
