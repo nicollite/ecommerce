@@ -1,0 +1,30 @@
+<div class="carousel-wrapper">
+  <ngb-carousel
+    #carousel
+    [interval]="7000"
+    [showNavigationArrows]="false"
+    [showNavigationIndicators]="false"
+  >
+    <ng-template *ngFor="let img of imgUrls" ngbSlide>
+      <img [src]="img" />
+    </ng-template>
+  </ngb-carousel>
+
+  <div class="carousel-controls">
+    <div class="arrows">
+      <app-arrow-navigator direction="right" (click)="carousel.next()"></app-arrow-navigator>
+      <app-arrow-navigator direction="left" (click)="carousel.prev()"></app-arrow-navigator>
+    </div>
+
+    <div class="pagination-dots">
+      <ng-container *ngIf="_slides">
+        <div
+          *ngFor="let slide of slides"
+          class="dot"
+          [class.active]="carousel.activeId === slide.id"
+          (click)="carousel.select(slide.id)"
+        ></div>
+      </ng-container>
+    </div>
+  </div>
+</div>

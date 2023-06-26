@@ -1,0 +1,65 @@
+:host {
+  width: 100%;
+}
+
+.carousel-items {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-items {
+}
+.carousel-item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+app-arrow-navigator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+
+  &[direction="right"] {
+    right: -32px;
+  }
+  &[direction="left"] {
+    left: -32px;
+  }
+}
+
+.pagination-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &.active {
+      background-color: #ffffff;
+    }
+  }
+}
