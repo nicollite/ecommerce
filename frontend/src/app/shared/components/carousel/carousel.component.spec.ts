@@ -1,10 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-
 import { CarouselComponent } from "./carousel.component";
 import { SharedModule } from "../../shared.module";
 import { NgbCarouselModule } from "@ng-bootstrap/ng-bootstrap";
-import { getNewCompoenntInstance } from "src/tests/utils/common";
-import { ChangeDetectionStrategy, ChangeDetectorRef } from "@angular/core";
+import { ChangeDetectorRef } from "@angular/core";
 
 describe("CarouselComponent", () => {
   let component: CarouselComponent;
