@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "~bootstrap/scss/bootstrap";
 @import "./reset.scss";
 @import "./helpers.scss";
 
@@ -13,9 +14,15 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
 }
 
 input {
@@ -41,5 +48,6 @@ input {
   h2,
   h3 {
     margin: 0;
+    line-height: normal;
   }
 }
