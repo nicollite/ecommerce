@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: "frontend",
-      script: "yarn",
-      args: "start",
+      script: "npm",
+      args: "run start",
       cwd: "frontend",
       combine_logs: true,
       log_file: "../logs/frontend.log",

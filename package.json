@@ -1,12 +1,21 @@
 {
   "private": true,
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js",
+    "restart": "pm2 delete all && pm2 start ecosystem.config.js",
+    "build-shared": "cd shared && yarn run build"
+  },
   "workspaces": {
     "packages": [
       "frontend",
       "shared"
     ],
     "nohoist": [
-      "frontend/**"
+      "frontend/**",
+      "shared/**"
     ]
+  },
+  "devDependencies": {
+    "pm2": "^5.1.2"
   }
 }
