@@ -1,0 +1,29 @@
+<div class="card-wrapper d-flex flex-column">
+  <ng-container *ngIf="product">
+    <img [src]="product.mainImgSrc" [alt]="product.name" />
+
+    <div class="product-info d-flex flex-column gap-5px">
+      <p class="product-name">{{ product.name }}</p>
+
+      <p
+        *ngIf="product.pricing.original_price !== product.pricing.price"
+        class="product-orignal-price"
+      >
+        {{ product.pricing.original_price | currency }}
+      </p>
+
+      <div class="d-flex align-items-center gap-10px">
+        <p class="product-price">{{ product.pricing.price | currency }}</p>
+
+        <p
+          *ngIf="discountPercentage && product.pricing.price < product.pricing.original_price"
+          class="off-percentage"
+        >
+          {{ discountPercentage }}% OFF
+        </p>
+      </div>
+
+      <p *ngIf="product.freeShipping" class="free-shipping">Frete Gratis</p>
+    </div>
+  </ng-container>
+</div>
