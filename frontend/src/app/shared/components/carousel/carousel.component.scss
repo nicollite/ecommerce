@@ -16,6 +16,15 @@
   position: relative;
 }
 
+ngb-carousel {
+  line-height: 0;
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+}
+
 app-arrow-navigator {
   position: absolute;
   top: 0;
@@ -52,4 +61,7 @@ app-arrow-navigator {
       background-color: #ffffff;
     }
   }
+}
+
+@media screen and (max-width: 1024px) {
 }

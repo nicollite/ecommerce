@@ -6,12 +6,12 @@
     [showNavigationIndicators]="false"
   >
     <ng-template *ngFor="let img of imgUrls" ngbSlide>
-      <img [src]="img" />
+      <img class="carousel-img" [src]="img" />
     </ng-template>
   </ngb-carousel>
 
   <div class="carousel-controls">
-    <div class="arrows">
+    <div class="arrows hidden-mobile">
       <app-arrow-navigator direction="left" (click)="carousel.prev()"></app-arrow-navigator>
       <app-arrow-navigator direction="right" (click)="carousel.next()"></app-arrow-navigator>
     </div>
