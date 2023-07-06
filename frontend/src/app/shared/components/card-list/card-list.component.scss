@@ -1,0 +1,56 @@
+:host,
+.list-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.loading-card {
+  width: 220px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.arrows {
+  app-arrow-navigator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+
+    &[direction="right"] {
+      right: -32px;
+    }
+    &[direction="left"] {
+      left: -32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .list {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .loading-card {
+    width: 160px;
+    min-width: 160px;
+  }
+}

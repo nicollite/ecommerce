@@ -1,0 +1,15 @@
+<div class="list-wrapper">
+  <div #list class="list">
+    <app-card *ngFor="let product of cards" [product]="product"></app-card>
+    <ng-container *ngIf="showLoadingCards">
+      <div *ngFor="let _ of loadingCards" class="loading-card">
+        <mat-spinner [diameter]="50"></mat-spinner>
+      </div>
+    </ng-container>
+  </div>
+
+  <div *ngIf="showArrows" class="arrows hidden-mobile">
+    <app-arrow-navigator direction="left" (click)="prev()"></app-arrow-navigator>
+    <app-arrow-navigator direction="right" (click)="next()"></app-arrow-navigator>
+  </div>
+</div>
