@@ -26,11 +26,4 @@ const declarations_exports = [...components, ...pipes, ...directives];
   ],
   exports: [...declarations_exports, FormsModule, ReactiveFormsModule, HttpClientModule],
 })
-export class SharedModule {
-  static forRoot(): ModuleWithProviders<SharedModule> {
-    return {
-      ngModule: SharedModule,
-      providers: [],
-    };
-  }
-}
+export class SharedModule {}
