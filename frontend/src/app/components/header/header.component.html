@@ -1,0 +1,74 @@
+<header class="d-flex flex-column">
+  <div class="desktop-header hidden-mobile">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>Logo</h1>
+
+      <app-header-search-bar></app-header-search-bar>
+
+      <div class="signin-login-buttons d-flex gap-1">
+        <button mat-button>Sign In</button>
+        <mat-divider [vertical]="true"></mat-divider>
+        <button mat-button>Login</button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-15px">
+        <mat-icon class="menu-icon">menu</mat-icon>
+        All Categories
+      </div>
+
+      <div class="header-btn-list d-flex justify-content-between gap-20px">
+        <button mat-button>Offer of the day</button>
+        <button mat-button>History</button>
+        <button mat-button>Category 1</button>
+        <button mat-button>Category 2</button>
+        <button mat-button>Category 3</button>
+        <button mat-button>Category 4</button>
+      </div>
+
+      <div class="d-flex align-items-center gap-10px">
+        <button mat-icon-button>
+          <mat-icon>notifications</mat-icon>
+        </button>
+
+        <button mat-button>
+          <div class="d-flex align-items-center gap-5px">
+            <mat-icon>shopping_cart</mat-icon>
+            <div>Cart</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-header hidden-desktop">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <mat-icon class="menu-icon">menu</mat-icon>
+        <h1>Logo</h1>
+      </div>
+
+      <div class="d-flex gap-2">
+        <div class="d-flex">
+          <button mat-icon-button>
+            <mat-icon>notifications</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
+
+        <div class="signin-login-buttons d-flex gap-1">
+          <button mat-button>Sign In</button>
+          <mat-divider [vertical]="true"></mat-divider>
+          <button mat-button>Login</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex">
+      <app-header-search-bar></app-header-search-bar>
+    </div>
+  </div>
+</header>

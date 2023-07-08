@@ -1,0 +1,54 @@
+:host {
+  color: #fff;
+  font-size: 16px;
+}
+
+header {
+  width: 100%;
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+.desktop-header {
+  & > div:nth-child(1) {
+    padding: 20px 30px 10px;
+  }
+
+  & > div:nth-child(2) {
+    padding: 0 20px 10px;
+  }
+
+  app-header-search-bar {
+    max-width: 800px;
+    margin: 0 20px;
+  }
+
+  .header-btn-list {
+    button {
+      padding: 0 4px;
+    }
+  }
+}
+
+.mobile-header {
+  & > div:nth-child(1) {
+    padding: 15px;
+  }
+
+  & > div:nth-child(2) {
+    padding: 0 25px 15px;
+  }
+}
+
+.signin-login-buttons {
+  mat-divider {
+    border-color: #fff;
+    margin: 7px 0;
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
