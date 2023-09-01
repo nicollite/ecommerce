@@ -11,6 +11,7 @@ import { NgbCarouselModule } from "@ng-bootstrap/ng-bootstrap";
 import { components } from "./components/components";
 import { pipes } from "./pipes/pipes";
 import { directives } from "./directives/directives";
+import { RouterModule } from "@angular/router";
 
 const declarations_exports = [...components, ...pipes, ...directives];
 
@@ -19,6 +20,7 @@ const declarations_exports = [...components, ...pipes, ...directives];
   entryComponents: [],
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     SharedMaterialModule,
