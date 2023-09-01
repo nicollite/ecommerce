@@ -1,0 +1,6 @@
+<div class="bread-crumbs-wrapper">
+  <ng-container *ngFor="let crumb of crumbs; let i = index">
+    <span [class.link]="!!crumb.path" (click)="navigate(crumb.path)">{{ crumb.name }}</span>
+    <mat-icon *ngIf="i !== crumbs.length - 1">chevron_right</mat-icon>
+  </ng-container>
+</div>

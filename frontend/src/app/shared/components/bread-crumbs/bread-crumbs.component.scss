@@ -1,0 +1,16 @@
+@import "variables";
+
+.bread-crumbs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.link {
+  color: $primary;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
